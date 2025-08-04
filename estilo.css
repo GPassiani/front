@@ -1,0 +1,132 @@
+/* --- :ROOT (VARIÁVEIS GLOBAIS) --- */
+:root {
+    --cor-primaria-mcafee: #b30000;
+    --cor-texto-principal: #2b2b2b;
+    --cor-fundo-claro: #f9f9f9;
+    --cor-fundo-medio: #f2f2f2;
+    --cor-branco: #ffffff;
+}
+
+/* --- RESET E ESTILOS BASE --- */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html, body { height: 100%; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: var(--cor-fundo-medio); color: var(--cor-texto-principal); overflow: hidden; line-height: 1.6; }
+
+/* --- CLASSES DE UTILIDADE --- */
+.hidden { display: none !important; }
+.visible { opacity: 1 !important; }
+
+/* --- ANIMAÇÃO DE CARREGAMENTO --- */
+#circuit-canvas { position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; background: var(--cor-fundo-medio); z-index: 9999; opacity: 1; transition: opacity 0.5s ease-out; }
+
+/* --- LAYOUT PRINCIPAL (HEADER, MAIN) --- */
+header { position: fixed; top: 0; width: 100%; z-index: 100; background: var(--cor-branco); box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); }
+nav { display: flex; align-items: center; padding: 0 1rem; gap: 0.5rem; height: 65px; }
+.nav-logo { display: block; height: 30px; width: auto; flex-shrink: 0; margin-right: 1.5rem; }
+#main-content { position: fixed; top: 65px; bottom: 0; left: 0; right: 0; max-width: 1280px; margin-left: auto; margin-right: auto; overflow-y: auto; padding: 2rem; background: var(--cor-fundo-claro); opacity: 0; transition: opacity 0.5s ease-in-out; }
+
+/* --- SISTEMA DE ABAS --- */
+.aba, .aba-produto { display: none; }
+.aba.ativa, .aba-produto.ativa { display: block; animation: fadeIn 0.5s ease-in-out; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+
+/* --- COMPONENTES GENÉRICOS --- */
+nav button { background: transparent; border: none; padding: 0.5rem 1rem; font-size: 1rem; cursor: pointer; color: var(--cor-texto-principal); transition: color 0.3s; font-weight: 600; white-space: nowrap; }
+nav button:hover, nav button.active { color: var(--cor-primaria-mcafee); }
+.dropdown { position: relative; }
+.dropdown-content { position: absolute; top: 100%; left: 0; background-color: var(--cor-branco); min-width: 250px; box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); z-index: 1; border-radius: 8px; overflow: hidden; padding: 0.5rem 0; }
+.dropdown-content button { display: flex; width: 100%; text-align: left; gap: 0.75rem; }
+.termos-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin-top: 2rem; }
+.flip-card { perspective: 1000px; height: 180px; cursor: pointer; }
+.flip-card-inner { position: relative; width: 100%; height: 100%; transform-style: preserve-3d; transition: transform 0.7s ease; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); border-radius: 12px; }
+.flip-card:hover .flip-card-inner, .flip-card:focus-within .flip-card-inner { transform: rotateY(180deg); }
+.flip-card-front, .flip-card-back { position: absolute; width: 100%; height: 100%; padding: 1rem; border-radius: 12px; backface-visibility: hidden; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; }
+.flip-card-back { transform: rotateY(180deg); color: var(--cor-branco); }
+
+/* --- SIMULADOR (ESTRUTURA GENÉRICA) --- */
+.simulador { margin-top: 3rem; padding: 2rem 1.5rem; text-align: center; border-radius: 12px; color: var(--cor-branco); }
+.simulador-tela { width: 90%; max-width: 600px; min-height: 320px; margin: 0 auto 1.5rem auto; border: 3px solid; border-radius: 16px; display: flex; flex-direction: column; justify-content: center; align-items: center; position: relative; padding: 1rem; }
+.simulador-elemento-animado { font-size: 3.5rem; position: absolute; top: 15px; animation: flutuar 2s ease-in-out infinite; }
+@keyframes flutuar { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+.simulador-icone { font-size: 2.5rem; margin-top: 1rem; animation: fadeIn 0.5s; }
+.botao-simular { padding: 0.8rem 2rem; font-size: 1.1rem; border: none; border-radius: 12px; cursor: pointer; font-weight: bold; transition: transform 0.3s ease; }
+.botao-simular:hover { transform: scale(1.05); }
+.botao-simular:disabled { background-color: #ccc !important; color: #666 !important; cursor: not-allowed; transform: none; }
+
+/* --- ESTILOS DE SEÇÃO E CONTEÚDO --- */
+h2 { font-size: 2.2rem; color: var(--cor-primaria-mcafee); border-bottom: 2px solid var(--cor-primaria-mcafee); padding-bottom: 0.5rem; margin-bottom: 2rem; }
+h3 { margin: 1.5rem 0 0.5rem; }
+h4 { margin: 1rem 0 0.5rem; }
+.bloco { display: flex; align-items: center; gap: 2rem; margin-bottom: 3rem; flex-wrap: wrap; background: var(--cor-branco); padding: 1.5rem; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); }
+.bloco:nth-child(even) { flex-direction: row-reverse; }
+.bloco > div, .bloco > img { flex: 1 1 300px; }
+.bloco img { max-width: 100%; height: auto; border-radius: 12px; object-fit: cover; }
+.bloco ul { padding-left: 1.5rem; }
+.bloco-explicacao { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; margin-top: 1rem; }
+.explicacao-item { background: #f0f0f0; padding: 1rem; border-radius: 8px; }
+.explicacao-item ul { padding-left: 1.2rem; }
+.plan-cards { display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; margin-top: 40px; }
+.plan-card { background: var(--cor-branco); border: 1px solid #e0e0e0; border-radius: 16px; width: 100%; max-width: 350px; box-shadow: 0 10px 25px rgba(0,0,0,0.07); transition: transform 0.3s ease, box-shadow 0.3s ease; padding-bottom: 1.5rem; display: flex; flex-direction: column; }
+.plan-card:hover { transform: translateY(-8px); box-shadow: 0 15px 30px rgba(176, 0, 32, 0.4);}
+.plan-card button:hover { background-color: #8a001a;}
+.plan-card h3 { background-color: var(--cor-primaria-mcafee); color: white; padding: 1.25rem; border-radius: 15px 15px 0 0; font-size: 1.5rem; }
+.plan-card .price { font-size: 1.25rem; margin: 1.5rem 0; text-align: center; }
+.plan-card ul { list-style: none; padding: 0 1.5rem; text-align: left; flex-grow: 1; }
+.plan-card ul li { padding: 0.5rem 0; border-bottom: 1px solid #eee; }
+.plan-card button { background-color: var(--cor-primaria-mcafee); color: white; border: none; padding: 14px 28px; margin: 1.5rem; font-size: 1rem; border-radius: 8px; cursor: pointer; transition: background-color 0.3s; }
+.plan-card .details { max-height: 0; overflow: hidden; transition: max-height 0.5s ease, padding 0.5s ease; padding: 0 1.5rem; }
+.plan-card .details.open { max-height: 200px; padding: 1rem 1.5rem; }
+.award-section { display: flex; align-items: center; gap: 1.5rem; margin-bottom: 2rem; background: var(--cor-branco); padding: 1.5rem; border-radius: 10px; flex-wrap: wrap; }
+.award-badge { width: 120px; height: auto; flex-shrink: 0; }
+.award-text ul { list-style: none; padding: 0; }
+.video-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; margin: 2rem auto; border-radius: 12px; }
+.video-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }
+
+/* --- TEMAS (CORES) PARA PRODUTOS E SIMULADORES --- */
+#antivirus .flip-card-back { background: #B00020; }
+#antivirus .simulador { background: linear-gradient(135deg, #B00020, #7E1E26); }
+#antivirus .simulador-tela { background: #2B2B2B; border-color: var(--cor-branco); }
+#antivirus .botao-simular { background: var(--cor-branco); color: #B00020; }
+#vpn .flip-card-back { background: #5a0a16; }
+#vpn .simulador { background: linear-gradient(135deg, #4d0b14, #000000); }
+#vpn .simulador-tela { background: #1C1C1C; border-color: var(--cor-branco); }
+#vpn .botao-simular { background: var(--cor-branco); color: #6A1B1A; }
+#seguranca-movel .flip-card-back { background: var(--cor-primaria-mcafee); }
+#seguranca-movel .simulador { background: #f0f0f0; }
+#seguranca-movel .simulador-tela { background: var(--cor-branco); border-color: #ddd; color: var(--cor-texto-principal); }
+#seguranca-movel .botao-simular { background: var(--cor-primaria-mcafee); color: var(--cor-branco); }
+#protecao-web .flip-card-back { background: #8B0000; }
+#protecao-web .simulador { background: linear-gradient(135deg, #8B0000, #B00020); }
+#protecao-web .simulador-tela { background: #3d0000; border-color: #ffb3b3; }
+#protecao-web .botao-simular { background: var(--cor-branco); color: #8B0000; }
+#otimizador-pc .flip-card-back { background: #D92E00; }
+#otimizador-pc .simulador { background: linear-gradient(135deg, #D92E00, #373737); }
+#otimizador-pc .simulador-tela { background: #212121; border-color: #FF5722; }
+#otimizador-pc .botao-simular { background: #FF5722; color: #212121; }
+#remocao-virus .flip-card-back { background: #E65100; }
+#remocao-virus .simulador { background: linear-gradient(135deg, #C62828, #E65100); }
+#remocao-virus .simulador-tela { background: #FFF3F3; border-color: #C62828; color: var(--cor-texto-principal); }
+#remocao-virus .botao-simular { background: var(--cor-branco); color: #C62828; }
+#controle-parental .flip-card-back { background: #c96464; }
+#controle-parental .simulador { background: linear-gradient(135deg, #c96464, #e6a1a1); }
+#controle-parental .simulador-tela { background: #f5e3e3; border-color: #c96464; color: var(--cor-texto-principal); }
+#controle-parental .botao-simular { background: #c96464; color: var(--cor-branco); }
+#seguranca-empresarial .flip-card-back { background: #343a40; } 
+#seguranca-empresarial .simulador { background: linear-gradient(135deg, #212529, #6c757d); }
+#seguranca-empresarial .simulador-tela { background: #000000; border-color: #adb5bd; }
+#seguranca-empresarial .botao-simular { background: #e9ecef; color: #212529; }
+
+/* --- NOVAS REGRAS ADICIONADAS --- */
+
+/* Estilo para o logo da TradeUp no menu */
+.nav-logo-tradeup {
+    height: 55px; /* Altura do logo */
+    width: auto;  /* Largura automática para manter proporção */
+    margin-left: auto; /* Empurra o logo para a direita */
+    padding-left: 2rem; /* Espaçamento dos outros itens do menu */
+}
+
+/* Estilo para o título da aba TradeUp */
+#tradeup h2 {
+    color: #007bff; /* Tom de azul */
+    border-bottom-color: #007bff; /* Cor da linha abaixo do título */
+}

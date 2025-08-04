@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>McAfee Proteção Digital</title>
+    <link rel="icon" href="https://smallimg.pngkey.com/png/small/686-6860574_mcafee-logo.png" type="image/png" />
+    <link rel="stylesheet" href="estilo.css" />
+</head>
+<body>
+
+    <canvas id="circuit-canvas"></canvas>
+
+    <header>
+        <nav>
+            <img src="https://logodownload.org/wp-content/uploads/2019/05/mcafee-logo-768x155.png" alt="Logo McAfee" class="nav-logo">
+            <button data-target="inicio" class="active">Início</button>
+            <div class="dropdown">
+                <button id="btn-produtos">Serviços</button>
+                <div class="dropdown-content hidden">
+                    <button class="subproduto" data-produto="antivirus">Antivírus</button>
+                    <button class="subproduto" data-produto="vpn">VPN</button>
+                    <button class="subproduto" data-produto="seguranca-movel">Segurança Móvel</button>
+                    <button class="subproduto" data-produto="protecao-web">Proteção na Web</button>
+                    <button class="subproduto" data-produto="otimizador-pc">Otimizador de PC</button>
+                    <button class="subproduto" data-produto="remocao-virus">Remoção de Vírus</button>
+                    <button class="subproduto" data-produto="controle-parental">Controle Parental</button>
+                    <button class="subproduto" data-produto="seguranca-empresarial">Segurança Empresarial</button>
+                </div>
+            </div>
+            <button data-target="planos">Nossos Planos</button>
+            <button data-target="sobre">Mais Sobre o McAfee</button>
+            <button data-target="tradeup">Conhecendo a TradeUp</button>
+            <button data-target="midias">Mídias</button>
+            <img src="https://www.tradeupgroup.com/wp-content/uploads/2021/12/TAO-600x141.png" alt="Logo TradeUp" class="nav-logo-tradeup">
+        </nav>
+    </header>
+
+    <main id="main-content" class="hidden">
+        
+        <section id="inicio" class="aba ativa">
+            <h2>Início</h2>
+            <div class="bloco">
+                <div>
+                    <h3>Quem é a McAfee?</h3>
+                    <p>A McAfee é uma das empresas mais respeitadas e reconhecidas globalmente no setor de cibersegurança.</p>
+                    <p>Fundada em 1987 por John McAfee, a empresa se consolidou como referência internacional na criação de soluções que protegem usuários, empresas e governos contra ameaças digitais.</p>
+                    <p>Com décadas de experiência, a McAfee desenvolve tecnologias que vão desde antivírus para usuários domésticos até plataformas avançadas de segurança para grandes corporações e ambientes governamentais.</p>
+                    <p>Hoje, a McAfee é sinônimo de inovação, confiança e excelência em segurança digital, comprometida com a proteção do mundo conectado.</p>
+                </div>
+                <img src="https://gaea.com.br/wp-content/uploads/2023/05/post_thumbnail-3fb950e126367d4a69c013537d54673a.jpeg" alt="Ilustração de um escudo digital protegendo dados e conexões.">
+            </div>
+            <div class="bloco">
+                <img src="https://www.dialogando.com.br/wp-content/uploads/2019/11/414.jpg" alt="Pessoas colaborando em um ambiente de trabalho tecnológico e moderno.">
+                <div>
+                    <h3>Missão da McAfee</h3>
+                    <p>A missão da McAfee é simples e poderosa: proteger o mundo digital. A empresa se compromete a oferecer soluções que garantam a segurança, a privacidade e a liberdade de seus usuários no ambiente online, permitindo que todos possam navegar, trabalhar e se conectar com confiança.</p>
+                    <p>Além disso, a McAfee investe continuamente em pesquisa e desenvolvimento para antecipar ameaças emergentes, apoiando a construção de um futuro digital mais seguro.</p>
+                </div>
+            </div>
+            <div class="bloco">
+                <div>
+                    <h3>Nossos Diferenciais</h3>
+                    <ul>
+                        <li>Tecnologia de ponta: Utilização de inteligência artificial e machine learning para detectar ameaças de forma proativa.</li>
+                        <li>Experiência global: Atuação em mais de 190 países, com suporte local e global.</li>
+                        <li>Proteção integral: Cobertura completa para dispositivos, redes e nuvem, com soluções integradas.</li>
+                        <li>Parcerias estratégicas: Colaborações com líderes do setor para ampliar a eficácia das defesas.</li>
+                        <li>Compromisso com privacidade: Transparência e ética no tratamento dos dados dos usuários.</li>
+                    </ul>
+                </div>
+                <img src="https://static.wixstatic.com/media/44ab5d_3210015eb3cf41aea18ced444f31902b~mv2.png/v1/fill/w_403,h_303,fp_0.50_0.50,q_95,enc_auto/44ab5d_3210015eb3cf41aea18ced444f31902b~mv2.png" alt="Ícones representando os diferenciais da McAfee.">
+            </div>
+            <div class="bloco">
+                <img src="https://www.securitymagazine.com/ext/resources/secenews/2019/globe_900.jpg?height=635&t=1554909319&width=1200" alt="Globo terrestre com pontos de conexão, ilustrando a proteção global.">
+                <div>
+                    <h3>O que a McAfee protege?</h3>
+                    <p>A McAfee protege diversos aspectos da vida digital, como:</p>
+                    <ul>
+                        <li>Computadores e dispositivos móveis contra vírus, trojans, malwares e ransomwares.</li>
+                        <li>Navegação na internet contra sites maliciosos e tentativas de phishing.</li>
+                        <li>Informações pessoais e senhas por meio de cofres digitais e VPN segura.</li>
+                        <li>Crianças e adolescentes com ferramentas de controle parental.</li>
+                        <li>Empresas com plataformas robustas de detecção e resposta a ameaças (XDR, EDR, SIEM, etc.).</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="bloco">
+                <div>
+                    <h3>Inovação constante</h3>
+                    <p>A McAfee investe pesadamente em pesquisa e desenvolvimento. Seu laboratório de inteligência contra ameaças, o McAfee Labs, monitora e analisa em tempo real as ameaças que surgem ao redor do mundo, atualizando seus produtos com base em inteligência artificial, aprendizado de máquina e análise comportamental avançada.</p>
+                </div>
+                <img src="https://s2.glbimg.com/j5spHR8yC1fw5q2-6P05E2XH75Q=/620x350/e.glbimg.com/og/ed/f/original/2018/05/25/thinkstockphotos-896358708.jpg" alt="Cérebro digital simbolizando inteligência artificial e inovação.">
+            </div>
+            <div class="bloco">
+                <img src="https://img.freepik.com/fotos-premium/revolucao-da-tecnologia-de-transformacao-digital-inovacao-da-era-digital-evolucao-da-tecnologia-de-papel-de-parede-di_980716-19412.jpg" alt="Mão humana e mão de robô se tocando, simbolizando a evolução tecnológica.">
+                <div>
+                    <h3>História e Evolução</h3>
+                    <p>Desde sua criação, a McAfee sempre esteve na vanguarda da segurança digital. No início, focava em softwares antivírus simples para computadores pessoais. Com o avanço da tecnologia e da conectividade, a empresa expandiu seu portfólio para incluir firewalls, sistemas de prevenção de intrusão, segurança para dispositivos móveis, proteção para ambientes em nuvem e soluções avançadas para empresas.</p>
+                    <p>Hoje, a McAfee integra inteligência artificial, análise comportamental e tecnologias de automação para garantir uma defesa eficaz contra ameaças complexas, como ransomware, phishing, ataques zero-day e ameaças persistentes avançadas (APT).</p>
+                </div>
+            </div>
+            <div class="bloco">
+                <div>
+                    <h3>Compromisso com os Usuários</h3>
+                    <p>A McAfee trabalha para que seus usuários tenham controle total sobre sua segurança digital, com interfaces intuitivas, suporte técnico especializado e atualizações constantes que acompanham a evolução das ameaças.</p>
+                    <p>Seu compromisso é também educar o público sobre melhores práticas de segurança, ajudando a construir uma cultura de cibersegurança global.</p>
+                </div>
+                <img src="https://www.datamind.pt/images/template-datamind/datamind/O_Nosso_Compromisso.png" alt="Selo de compromisso com a qualidade e o cliente.">
+            </div>
+        </section>
+
+        <section id="servicos" class="aba">
+            <h2>Nossos Serviços</h2>
+            
+            <div id="antivirus" class="aba-produto">
+                <h2>🛡️ Antivírus</h2>
+                <h3>O que é e como funciona</h3>
+                <p>Proteção completa contra vírus, malwares e ransomware com tecnologia premiada da McAfee. O antivírus é um software que previne, identifica e remove ameaças digitais como trojans, worms, ransomware, spyware e adware.</p>
+                <h4>Abaixo uma explicação detalhada</h4>
+                <div class="bloco-explicacao">
+                    <div class="explicacao-item"><h4>1. Detecção baseada em assinaturas</h4><p>Compara arquivos com um banco de dados de malwares conhecidos. Se houver correspondência, bloqueia imediatamente.</p></div>
+                    <div class="explicacao-item"><h4>2. Detecção heurística</h4><p>Identifica comportamentos suspeitos mesmo sem assinatura. Essencial contra malwares inéditos (zero-day).</p></div>
+                    <div class="explicacao-item"><h4>3. Proteção em tempo real</h4><p>Escaneia arquivos e links automaticamente durante o uso. Reage instantaneamente a qualquer ameaça.</p></div>
+                    <div class="explicacao-item"><h4>4. Tipos de varredura</h4><ul><li><strong>Full Scan:</strong> analisa o sistema inteiro.</li><li><strong>Quick Scan:</strong> examina áreas críticas.</li><li><strong>Custom Scan:</strong> permite escolher pastas específicas.</li><li><strong>Boot-Time Scan:</strong> executado antes do sistema iniciar.</li></ul></div>
+                </div>
+                <h3>Termos Técnicos Fundamentais</h3>
+                <div class="termos-grid">
+                    <div class="flip-card" tabindex="0"><div class="flip-card-inner"><div class="flip-card-front"><strong>Malware</strong><p>Conjunto de softwares maliciosos.</p></div><div class="flip-card-back"><p>💡 <strong>WannaCry:</strong> Ransomware que criptografou PCs no mundo todo em 2017.</p></div></div></div>
+                    <div class="flip-card" tabindex="0"><div class="flip-card-inner"><div class="flip-card-front"><strong>Rootkit</strong><p>Oculta malwares e dá acesso privilegiado.</p></div><div class="flip-card-back"><p>💡 <strong>Sony BMG Rootkit:</strong> Instalado com CDs de música, comprometia PCs.</p></div></div></div>
+                    <div class="flip-card" tabindex="0"><div class="flip-card-inner"><div class="flip-card-front"><strong>Vírus</strong><p>Se anexa a arquivos e se replica.</p></div><div class="flip-card-back"><p>💡 <strong>CIH (Chernobyl):</strong> Danificava arquivos e até o BIOS do sistema.</p></div></div></div>
+                    <div class="flip-card" tabindex="0"><div class="flip-card-inner"><div class="flip-card-front"><strong>Worm</strong><p>Se propaga sozinho por redes.</p></div><div class="flip-card-back"><p>💡 <strong>Morris Worm:</strong> Infectou milhares de máquinas em 1988.</p></div></div></div>
+                    <div class="flip-card" tabindex="0"><div class="flip-card-inner"><div class="flip-card-front"><strong>Trojan</strong><p>Finge ser confiável para abrir brechas.</p></div><div class="flip-card-back"><p>💡 <strong>Zeus Trojan:</strong> Especializado em roubar dados bancários.</p></div></div></div>
+                    <div class="flip-card" tabindex="0"><div class="flip-card-inner"><div class="flip-card-front"><strong>Ransomware</strong><p>Criptografa arquivos e exige resgate.</p></div><div class="flip-card-back"><p>💡 <strong>Locky:</strong> Espalhava-se via e-mails com anexos falsos.</p></div></div></div>
+                    <div class="flip-card" tabindex="0"><div class="flip-card-inner"><div class="flip-card-front"><strong>Spyware</strong><p>Espiona o comportamento do usuário.</p></div><div class="flip-card-back"><p>💡 <strong>CoolWebSearch:</strong> Redirecionava buscas e espionava.</p></div></div></div>
+                    <div class="flip-card" tabindex="0"><div class="flip-card-inner"><div class="flip-card-front"><strong>Adware</strong><p>Exibe propagandas intrusivas.</p></div><div class="flip-card-back"><p>💡 <strong>Fireball:</strong> Controlava navegadores e espionava usuários.</p></div></div></div>
+                    <div class="flip-card" tabindex="0"><div class="flip-card-inner"><div class="flip-card-front"><strong>Keylogger</strong><p>Registra tudo que o usuário digita.</p></div><div class="flip-card-back"><p>💡 <strong>Ardamax:</strong> Enviava os dados digitados aos atacantes.</p></div></div></div>
+                    <div class="flip-card" tabindex="0"><div class="flip-card-inner"><div class="flip-card-front"><strong>Polymorphic Malware</strong><p>Muda seu código para evitar detecção.</p></div><div class="flip-card-back"><p>💡 <strong>Storm Worm:</strong> Alterava sua assinatura em cada infecção.</p></div></div></div>
+                    <div class="flip-card" tabindex="0"><div class="flip-card-inner"><div class="flip-card-front"><strong>Zero-day</strong><p>Explora falhas ainda desconhecidas.</p></div><div class="flip-card-back"><p>💡 <strong>Stuxnet:</strong> Usava falhas do Windows não divulgadas.</p></div></div></div>
+                    <div class="flip-card" tabindex="0"><div class="flip-card-inner"><div class="flip-card-front"><strong>Quarantine</strong><p>Isola arquivos suspeitos sem excluí-los.</p></div><div class="flip-card-back"><p>💡 <strong>McAfee:</strong> Move arquivos maliciosos para quarentena.</p></div></div></div>
+                    <div class="flip-card" tabindex="0"><div class="flip-card-inner"><div class="flip-card-front"><strong>False Positive</strong><p>Erro onde arquivos legítimos são confundidos com malwares.</p></div><div class="flip-card-back"><p>💡 Um antivírus pode bloquear um jogo ou software confiável por engano.</p></div></div></div>
+                    <div class="flip-card" tabindex="0"><div class="flip-card-inner"><div class="flip-card-front"><strong>Sandbox</strong><p>Ambiente virtual isolado para testar arquivos suspeitos.</p></div><div class="flip-card-back"><p>💡 Executa malwares sem risco ao sistema real.</p></div></div></div>
+                    <div class="flip-card" tabindex="0"><div class="flip-card-inner"><div class="flip-card-front"><strong>Cloud AV</strong><p>Antivírus com análise em tempo real via nuvem.</p></div><div class="flip-card-back"><p>💡 McAfee utiliza nuvem para detectar malwares ainda desconhecidos.</p></div></div></div>
+                    <div class="flip-card" tabindex="0"><div class="flip-card-inner"><div class="flip-card-front"><strong>Multiscanning</strong><p>Usa múltiplos mecanismos antivírus simultaneamente.</p></div><div class="flip-card-back"><p>💡 Aumenta a precisão na detecção ao combinar motores diferentes.</p></div></div></div>
+                    <div class="flip-card" tabindex="0"><div class="flip-card-inner"><div class="flip-card-front"><strong>Auto-Protect</strong><p>Bloqueia ameaças automaticamente ao serem detectadas.</p></div><div class="flip-card-back"><p>💡 McAfee impede execução de arquivos maliciosos assim que detectados.</p></div></div></div>
+                    <div class="flip-card" tabindex="0"><div class="flip-card-inner"><div class="flip-card-front"><strong>Behavioral Analysis</strong><p>Detecta ameaças com base em comportamentos anômalos.</p></div><div class="flip-card-back"><p>💡 Detecta alteração suspeita de arquivos em tempo real.</p></div></div></div>
+                    <div class="flip-card" tabindex="0"><div class="flip-card-inner"><div class="flip-card-front"><strong>Signature-Based Detection</strong><p>Compara arquivos com um banco de dados de ameaças conhecidas.</p></div><div class="flip-card-back"><p>💡 Detecta trojan com base em sua assinatura digital clássica.</p></div></div></div>
+                    <div class="flip-card" tabindex="0"><div class="flip-card-inner"><div class="flip-card-front"><strong>Heuristic Analysis</strong><p>Usa regras para identificar possíveis ameaças desconhecidas.</p></div><div class="flip-card-back"><p>💡 Detecta arquivo que tenta alterar registros do sistema.</p></div></div></div>
+                    <div class="flip-card" tabindex="0"><div class="flip-card-inner"><div class="flip-card-front"><strong>Real-Time Protection</strong><p>Monitora e bloqueia ameaças no exato momento em que surgem.</p></div><div class="flip-card-back"><p>💡 Bloqueia vírus assim que o download inicia.</p></div></div></div>
+                    <div class="flip-card" tabindex="0"><div class="flip-card-inner"><div class="flip-card-front"><strong>Remediation</strong><p>Remove ameaças e restaura o sistema ao estado seguro.</p></div><div class="flip-card-back"><p>💡 Apaga trojan e reverte alterações do registro feitas pelo malware.</p></div></div></div>
+                    <div class="flip-card" tabindex="0"><div class="flip-card-inner"><div class="flip-card-front"><strong>Reputation-Based Detection</strong><p>Avalia a confiabilidade de arquivos com base em reputação na nuvem.</p></div><div class="flip-card-back"><p>💡 Bloqueia execução de programa recém-lançado com baixa confiança.</p></div></div></div>
+                    <div class="flip-card" tabindex="0"><div class="flip-card-inner"><div class="flip-card-front"><strong>Machine Learning</strong><p>Detecta malwares com base em padrões aprendidos por IA.</p></div><div class="flip-card-back"><p>💡 Identifica ransomware por comportamento, mesmo sem assinatura.</p></div></div></div>
+                    <div class="flip-card" tabindex="0"><div class="flip-card-inner"><div class="flip-card-front"><strong>Exploit Protection</strong><p>Previne exploração de falhas de segurança em softwares.</p></div><div class="flip-card-back"><p>💡 Bloqueia ataque ao Adobe Reader por vulnerabilidade crítica.</p></div></div></div>
+                    <div class="flip-card" tabindex="0"><div class="flip-card-inner"><div class="flip-card-front"><strong>Anti-Phishing</strong><p>Impede sites e e-mails fraudulentos que visam roubar dados.</p></div><div class="flip-card-back"><p>💡 Alerta ao clicar em e-mail falso fingindo ser do banco.</p></div></div></div>
+                    <div class="flip-card" tabindex="0"><div class="flip-card-inner"><div class="flip-card-front"><strong>Boot Sector Virus</strong><p>Infecta o setor de inicialização do disco, afetando o boot.</p></div><div class="flip-card-back"><p>💡 Michelangelo apagava dados em datas específicas.</p></div></div></div>
+                    <div class="flip-card" tabindex="0"><div class="flip-card-inner"><div class="flip-card-front"><strong>Fileless Malware</strong><p>Opera diretamente na memória, sem deixar arquivos.</p></div><div class="flip-card-back"><p>💡 Executa código malicioso via PowerShell sem salvar no disco.</p></div></div></div>
+                    <div class="flip-card" tabindex="0"><div class="flip-card-inner"><div class="flip-card-front"><strong>Logic Bomb</strong><p>Malware ativado por eventos específicos ou condições programadas.</p></div><div class="flip-card-back"><p>💡 Dispara e apaga arquivos se o usuário for desligado da empresa.</p></div></div></div>
+                    <div class="flip-card" tabindex="0"><div class="flip-card-inner"><div class="flip-card-front"><strong>Macro Virus</strong><p>Se esconde em documentos do Word/Excel e executa macros nocivas.</p></div><div class="flip-card-back"><p>💡 Macro maliciosa envia cópias para e-mails salvos no sistema.</p></div></div></div>
+                </div>
+                <section class="simulador">
+                    <h3>Como o Antivírus Reage a uma Ameaça</h3>
+                    <div class="simulador-tela"><div class="simulador-elemento-animado hidden">🦠</div><div class="simulador-mensagem">Clique para iniciar a simulação</div><div class="simulador-descricao"></div><div class="simulador-icone hidden"></div></div>
+                    <button class="botao-simular" data-simulador="antivirus">▶️ Simular Ataque</button>
+                </section>
+            </div>
+
+            <div id="vpn" class="aba-produto">
+                <h2>🛜 VPN (Rede Privada Virtual)</h2>
+                <h3>O que é e como funciona</h3>
+                <p>A VPN da McAfee cria um túnel criptografado entre o seu dispositivo e a internet, ocultando sua identidade e impedindo que terceiros rastreiem sua atividade online. Ideal para navegação segura em redes Wi-Fi públicas, proteção de dados sensíveis e acesso a conteúdos restritos geograficamente.</p>
+                <h4>Como a VPN protege sua conexão</h4>
+                <div class="bloco-explicacao">
+                    <div class="explicacao-item"><h4>1. Criptografia de Dados</h4><p>Todos os dados transmitidos passam por uma criptografia de ponta (como AES-256), impedindo interceptações.</p></div>
+                    <div class="explicacao-item"><h4>2. Tunelamento Seguro</h4><p>O tráfego da sua rede é encapsulado em um túnel digital, evitando que seja visualizado por terceiros.</p></div>
+                    <div class="explicacao-item"><h4>3. Ocultação de IP</h4><p>O seu endereço IP é substituído por um IP do servidor VPN, garantindo anonimato e proteção da sua localização.</p></div>
+                    <div class="explicacao-item"><h4>4. Proteção em Redes Públicas</h4><p>Evita que redes Wi-Fi abertas, como as de cafés e aeroportos, exponham seus dados pessoais a ataques.</p></div>
+                </div>
+                <h3>Termos Técnicos Fundamentais</h3>
+                <div class="termos-grid">
+                    <div class="flip-card" tabindex="0"><div class="flip-card-inner"><div class="flip-card-front"><strong>Geo-spoofing</strong></div><div class="flip-card-back"><p>Alterar sua localização virtual para acessar conteúdos restritos a outros países. Ex: Assistir a catálogos de streaming de outros países.</p></div></div></div>
+                    <div class="flip-card" tabindex="0"><div class="flip-card-inner"><div class="flip-card-front"><strong>Prevenção de Throttling</strong></div><div class="flip-card-back"><p>Impede que seu provedor de internet reduza sua velocidade com base na sua atividade online (como jogos ou streaming).</p></div></div></div>
+                    <div class="flip-card" tabindex="0"><div class="flip-card-inner"><div class="flip-card-front"><strong>Criptografia de Tráfego</strong></div><div class="flip-card-back"><p>Codifica toda a sua atividade na internet, tornando-a ilegível para qualquer um que tente espionar.</p></div></div></div>
+                    <div class="flip-card" tabindex="0"><div class="flip-card-inner"><div class="flip-card-front"><strong>Servidores Ofuscados</strong></div><div class="flip-card-back"><p>Disfarçam o tráfego de VPN, fazendo-o parecer navegação comum para contornar bloqueios e restrições de rede.</p></div></div></div>
+                    <div class="flip-card" tabindex="0"><div class="flip-card-inner"><div class="flip-card-front"><strong>IP Dedicado</strong></div><div class="flip-card-back"><p>Um endereço de IP exclusivo para você, que não é compartilhado com outros usuários, evitando listas de bloqueio.</p></div></div></div>
+                    <div class="flip-card" tabindex="0"><div class="flip-card-inner"><div class="flip-card-front"><strong>Protocolo WireGuard®</strong></div><div class="flip-card-back"><p>Um protocolo de VPN moderno que oferece altíssimas velocidades e segurança de ponta.</p></div></div></div>
+                    <div class="flip-card" tabindex="0"><div class="flip-card-inner"><div class="flip-card-front"><strong>Split Tunneling</strong></div><div class="flip-card-back"><p>Permite escolher quais aplicativos usam a VPN e quais usam sua conexão normal ao mesmo tempo.</p></div></div></div>
+                    <div class="flip-card" tabindex="0"><div class="flip-card-inner"><div class="flip-card-front"><strong>Proteção de WebRTC</strong></div><div class="flip-card-back"><p>Impede que seu endereço IP real seja exposto através de falhas em chamadas de vídeo ou voz no navegador.</p></div></div></div>
+                    <div class="flip-card" tabindex="0"><div class="flip-card-inner"><div class="flip-card-front"><strong>Servidor Multi-hop</strong></div><div class="flip-card-back"><p>Roteia sua conexão através de múltiplos servidores de VPN para uma camada extra de anonimato.</p></div></div></div>
+                    <div class="flip-card" tabindex="0"><div class="flip-card-inner"><div class="flip-card-front"><strong>Conexão Automática</strong></div><div class="flip-card-back"><p>Configura a VPN para ativar automaticamente sempre que você se conectar a uma rede Wi-Fi pública ou insegura.</p></div></div></div>
+                    <div class="flip-card" tabindex="0"><div class="flip-card-inner"><div class="flip-card-front"><strong>Kill Switch</strong></div><div class="flip-card-back"><p>Recurso que corta sua conexão com a internet instantaneamente se a VPN cair, evitando vazamento de dados.</p></div></div></div>
+                    <div class="flip-card" tabindex="0"><div class="flip-card-inner"><div class="flip-card-front"><strong>Carga do Servidor</strong></div><div class="flip-card-back"><p>Mostra a porcentagem de uso de um servidor, ajudando a escolher um menos congestionado para maior velocidade.</p></div></div></div>
+                    <div class="flip-card" tabindex="0"><div class="flip-card-inner"><div class="flip-card-front"><strong>Perfect Forward Secrecy</strong></div><div class="flip-card-back"><p>Técnica que gera uma nova chave de segurança para cada sessão, impedindo que futuras sessões sejam comprometidas.</p></div></div></div>
+                    <div class="flip-card" tabindex="0"><div class="flip-card-inner"><div class="flip-card-front"><strong>Proteção IPv6</strong></div><div class="flip-card-back"><p>Garante que seu tráfego de internet mais moderno (IPv6) também seja roteado pelo túnel seguro da VPN.</p></div></div></div>
+                    <div class="flip-card" tabindex="0"><div class="flip-card-inner"><div class="flip-card-front"><strong>DNS Inteligente</strong></div><div class="flip-card-back"><p>Tecnologia focada em desbloquear serviços de streaming sem criptografar todo o tráfego, oferecendo maior velocidade.</p></div></div></div>
+                </div>
+                <section class="simulador">
+                    <h3>Como a VPN Protege Sua Conexão</h3>
+                    <div class="simulador-tela"><div class="simulador-elemento-animado hidden">👁️</div><div class="simulador-mensagem">Clique para iniciar a simulação</div><div class="simulador-descricao"></div><div class="simulador-icone hidden"></div></div>
+                    <button class="botao-simular" data-simulador="vpn">▶️ Simular Conexão Segura</button>
+                </section>
+            </div>
+            
+            <div id="seguranca-movel" class="aba-produto">
+                <h2>📱 Segurança Móvel</h2>
+                <h3>O que é e como funciona</h3>
+                <p>A Segurança Móvel da McAfee protege smartphones e tablets contra ameaças como malwares, apps maliciosos, redes Wi-Fi inseguras, rastreamento e roubo de dados. Ela atua em tempo real com antivírus mobile, detecção de apps perigosos, navegação segura, bloqueio remoto e otimização de desempenho.</p>
+                <h4>Abaixo uma explicação detalhada</h4>
+                <div class="bloco-explicacao">
+                    <div class="explicacao-item"><h4>1. Antivírus para dispositivos móveis</h4><p>Escaneia e monitora apps instalados, downloads e arquivos em busca de ameaças, com base em nuvem e inteligência comportamental.</p></div>
+                    <div class="explicacao-item"><h4>2. Verificação de apps e permissões</h4><p>Analisa os aplicativos instalados em busca de comportamentos suspeitos ou permissões abusivas, como acesso à câmera ou microfone sem motivo.</p></div>
+                    <div class="explicacao-item"><h4>3. Proteção em redes Wi-Fi</h4><p>Detecta redes públicas ou comprometidas e alerta o usuário sobre riscos de interceptação ou ataques man-in-the-middle.</p></div>
+                    <div class="explicacao-item"><h4>4. Localização e controle remoto</h4><p>Permite localizar o dispositivo em caso de perda ou roubo, bloqueá-lo, emitir alarmes ou apagar dados remotamente.</p></div>
+                </div>
+                <h3>Termos Técnicos Fundamentais</h3>
+                <div class="termos-grid">
+                    <div class="flip-card" tabindex="0"><div class="flip-card-inner"><div class="flip-card-front"><strong>Anti-furto (Anti-Theft)</strong></div><div class="flip-card-back"><p>Funções para localizar, bloquear ou apagar os dados do seu celular remotamente em caso de perda ou roubo.</p></div></div></div>
+                    <div class="flip-card" tabindex="0"><div class="flip-card-inner"><div class="flip-card-front"><strong>Consultor de Privacidade</strong></div><div class="flip-card-back"><p>Mostra quais aplicativos têm acesso indevido aos seus dados como localização, contatos e microfone.</p></div></div></div>
+                    <div class="flip-card" tabindex="0"><div class="flip-card-inner"><div class="flip-card-front"><strong>Verificador de Wi-Fi</strong></div><div class="flip-card-back"><p>Analisa a segurança da rede Wi-Fi, alertando sobre "redes gêmeas" maliciosas ou conexões desprotegidas.</p></div></div></div>
+                    <div class="flip-card" tabindex="0"><div class="flip-card-inner"><div class="flip-card-front"><strong>Proteção Juice Jacking</strong></div><div class="flip-card-back"><p>Bloqueia a transferência de dados não autorizada ao carregar seu celular em portas USB públicas.</p></div></div></div>
+                    <div class="flip-card" tabindex="0"><div class="flip-card-inner"><div class="flip-card-front"><strong>Cofre de Mídia</strong></div><div class="flip-card-back"><p>Uma pasta protegida por senha e criptografia para guardar fotos e vídeos privados com segurança.</p></div></div></div>
+                    <div class="flip-card" tabindex="0"><div class="flip-card-inner"><div class="flip-card-front"><strong>Proteção contra SMiShing</strong></div><div class="flip-card-back"><p>Detecta e bloqueia mensagens de texto (SMS) fraudulentas que tentam roubar suas informações com links falsos.</p></div></div></div>
+                    <div class="flip-card" tabindex="0"><div class="flip-card-inner"><div class="flip-card-front"><strong>Bloqueio de App com PIN</strong></div><div class="flip-card-back"><p>Permite adicionar uma camada extra de segurança com senha em aplicativos específicos como apps de banco ou WhatsApp.</p></div></div></div>
+                    <div class="flip-card" tabindex="0"><div class="flip-card-inner"><div class="flip-card-front"><strong>Otimizador de Desempenho</strong></div><div class="flip-card-back"><p>Libera memória RAM e armazenamento, fechando apps inativos e limpando o cache para acelerar o celular.</p></div></div></div>
+                    <div class="flip-card" tabindex="0"><div class="flip-card-inner"><div class="flip-card-front"><strong>Detecção de Overlay</strong></div><div class="flip-card-back"><p>Impede que um app malicioso sobreponha uma tela falsa sobre um app legítimo para roubar senhas.</p></div></div></div>
+                    <div class="flip-card" tabindex="0"><div class="flip-card-inner"><div class="flip-card-front"><strong>Scanner de QR Code</strong></div><div class="flip-card-back"><p>Verifica a segurança de links em QR Codes antes de abrir o site, evitando armadilhas e sites maliciosos.</p></div></div></div>
+                    <div class="flip-card" tabindex="0"><div class="flip-card-inner"><div class="flip-card-front"><strong>Proteção contra SIM Swap</strong></div><div class="flip-card-back"><p>Alerta sobre atividades suspeitas relacionadas ao seu chip (SIM card), como tentativas de portabilidade não autorizadas.</p></div></div></div>
+                    <div class="flip-card" tabindex="0"><div class="flip-card-inner"><div class="flip-card-front"><strong>Anti-Screen Logger</strong></div><div class="flip-card-back"><p>Impede que malwares capturem screenshots ou gravem a tela do seu celular para roubar informações sensíveis.</p></div></div></div>
+                    <div class="flip-card" tabindex="0"><div class="flip-card-inner"><div class="flip-card-front"><strong>Teclado Seguro</strong></div><div class="flip-card-back"><p>Oferece um teclado virtual próprio dentro de apps sensíveis para impedir que keyloggers capturem o que você digita.</p></div></div></div>
+                    <div class="flip-card" tabindex="0"><div class="flip-card-inner"><div class="flip-card-front"><strong>Verificação de Integridade</strong></div><div class="flip-card-back"><p>Verifica se o sistema do seu celular foi modificado (root/jailbreak), o que pode abrir brechas de segurança.</p></div></div></div>
+                    <div class="flip-card" tabindex="0"><div class="flip-card-inner"><div class="flip-card-front"><strong>Detecção de Perfil Malicioso</strong></div><div class="flip-card-back"><p>Analisa perfis de configuração instalados para detectar ajustes que possam comprometer sua privacidade.</p></div></div></div>
+                </div>
+                <section class="simulador">
+                    <h3>Como a Segurança Móvel Atua</h3>
+                    <div class="simulador-tela"><div class="simulador-elemento-animado hidden">📲</div><div class="simulador-mensagem">Clique para iniciar a simulação</div><div class="simulador-descricao"></div><div class="simulador-icone hidden"></div></div>
+                    <button class="botao-simular" data-simulador="segurancaMovel">▶️ Simular Proteção de App</button>
+                </section>
+            </div>
+            
+            <div id="protecao-web" class="aba-produto">
+                <h2>🌐 Proteção na Web</h2>
+                <h3>O que é e como funciona</h3>
+                <p>Atua como uma camada de segurança entre o usuário e os sites acessados. Ela bloqueia páginas perigosas, impede downloads maliciosos, detecta fraudes online, protege contra links suspeitos em e-mails e redes sociais e analisa a reputação de sites em tempo real.</p>
+                <h4>Abaixo uma explicação detalhada</h4>
+                <div class="bloco-explicacao">
+                    <div class="explicacao-item"><h4>1. Filtro de URLs maliciosas</h4><p>Monitora os links acessados pelo navegador e bloqueia automaticamente URLs classificadas como perigosas ou fraudulentas.</p></div>
+                    <div class="explicacao-item"><h4>2. Navegação segura com reputação em tempo real</h4><p>Verifica a reputação de sites usando inteligência em nuvem antes mesmo de a página ser carregada.</p></div>
+                    <div class="explicacao-item"><h4>3. Bloqueio de scripts e exploits em páginas</h4><p>Impede que códigos maliciosos embutidos em sites sejam executados, protegendo contra infecções automáticas.</p></div>
+                    <div class="explicacao-item"><h4>4. Proteção contra links maliciosos em e-mails e redes sociais</h4><p>Analisa URLs recebidas em mensagens e bloqueia o acesso se forem associadas a phishing ou malware.</p></div>
+                </div>
+                <h3>Termos Técnicos Fundamentais</h3>
+                <div class="termos-grid">
+                    <div class="flip-card" tabindex="0"><div class="flip-card-inner"><div class="flip-card-front"><strong>Filtro de Conteúdo</strong></div><div class="flip-card-back"><p>Bloqueia o acesso a categorias de sites (ex: apostas, conteúdo adulto) com base em regras personalizadas.</p></div></div></div>
+                    <div class="flip-card" tabindex="0"><div class="flip-card-inner"><div class="flip-card-front"><strong>Defesa contra Malvertising</strong></div><div class="flip-card-back"><p>Impede que anúncios maliciosos em sites legítimos executem scripts para infectar seu computador.</p></div></div></div>
+                    <div class="flip-card" tabindex="0"><div class="flip-card-inner"><div class="flip-card-front"><strong>Proteção contra XSS</strong></div><div class="flip-card-back"><p>Previne que atacantes injetem scripts maliciosos em sites que você visita para roubar cookies de sessão.</p></div></div></div>
+                    <div class="flip-card" tabindex="0"><div class="flip-card-inner"><div class="flip-card-front"><strong>Análise de Download</strong></div><div class="flip-card-back"><p>Verifica a reputação de um arquivo na nuvem antes mesmo do download ser concluído, bloqueando ameaças.</p></div></div></div>
+                    <div class="flip-card" tabindex="0"><div class="flip-card-inner"><div class="flip-card-front"><strong>Browser Hardening</strong></div><div class="flip-card-back"><p>Aplica configurações de segurança mais rígidas ao seu navegador para reduzir as chances de ataques.</p></div></div></div>
+                    <div class="flip-card" tabindex="0"><div class="flip-card-inner"><div class="flip-card-front"><strong>Proteção Formjacking</strong></div><div class="flip-card-back"><p>Impede que scripts invisíveis em páginas de checkout de lojas online roubem os dados do seu cartão.</p></div></div></div>
+                    <div class="flip-card" tabindex="0"><div class="flip-card-inner"><div class="flip-card-front"><strong>URL Blacklisting Dinâmico</strong></div><div class="flip-card-back"><p>Utiliza uma lista, atualizada em tempo real, de milhões de sites perigosos conhecidos e bloqueia o acesso.</p></div></div></div>
+                    <div class="flip-card" tabindex="0"><div class="flip-card-inner"><div class="flip-card-front"><strong>Alerta de Typosquatting</strong></div><div class="flip-card-back"><p>Avisa quando você digita um endereço de site com um erro comum (ex: "gogle.com") que leva a uma página falsa.</p></div></div></div>
+                    <div class="flip-card" tabindex="0"><div class="flip-card-inner"><div class="flip-card-front"><strong>Bloqueio de Rastreadores</strong></div><div class="flip-card-back"><p>Impede que redes de publicidade monitorem seu comportamento através de múltiplos sites, aumentando sua privacidade.</p></div></div></div>
+                    <div class="flip-card" tabindex="0"><div class="flip-card-inner"><div class="flip-card-front"><strong>Verificação de Scripts</strong></div><div class="flip-card-back"><p>Analisa o código de um site em busca de scripts maliciosos antes que eles sejam executados no seu navegador.</p></div></div></div>
+                    <div class="flip-card" tabindex="0"><div class="flip-card-inner"><div class="flip-card-front"><strong>Tecnologia Anti-exploit</strong></div><div class="flip-card-back"><p>Protege contra ataques que exploram vulnerabilidades em softwares desatualizados no seu navegador, como Java ou Flash.</p></div></div></div>
+                    <div class="flip-card" tabindex="0"><div class="flip-card-inner"><div class="flip-card-front"><strong>Forçar Conexão HTTPS</strong></div><div class="flip-card-back"><p>Garante uma conexão segura e criptografada (HTTPS) sempre que possível, mesmo que você clique em um link HTTP antigo.</p></div></div></div>
+                    <div class="flip-card" tabindex="0"><div class="flip-card-inner"><div class="flip-card-front"><strong>Gerenciador de Cookies</strong></div><div class="flip-card-back"><p>Permite gerenciar e limpar cookies de rastreamento de terceiros para aumentar a privacidade e reduzir sua "pegada digital".</p></div></div></div>
+                    <div class="flip-card" tabindex="0"><div class="flip-card-inner"><div class="flip-card-front"><strong>Proteção contra Pharming</strong></div><div class="flip-card-back"><p>Impede que seu tráfego seja redirecionado para sites falsos através da manipulação de DNS, mesmo que você digite o endereço correto.</p></div></div></div>
+                    <div class="flip-card" tabindex="0"><div class="flip-card-inner"><div class="flip-card-front"><strong>Monitor de Vazamentos</strong></div><div class="flip-card-back"><p>Alerta se o seu e-mail ou senhas aparecerem em vazamentos de dados de outros sites que você usa.</p></div></div></div>
+                </div>
+                <section class="simulador">
+                    <h3>Como a Proteção Web Funciona</h3>
+                    <div class="simulador-tela"><div class="simulador-elemento-animado hidden">🎣</div><div class="simulador-mensagem">Clique para iniciar a simulação</div><div class="simulador-descricao"></div><div class="simulador-icone hidden"></div></div>
+                    <button class="botao-simular" data-simulador="protecaoWeb">▶️ Simular Bloqueio de Site</button>
+                </section>
+            </div>
+
+            <div id="otimizador-pc" class="aba-produto">
+                <h2>⚙️ Otimizador de PC</h2>
+                <h3>O que é e como funciona</h3>
+                <p>O Otimizador de PC da McAfee melhora o desempenho do computador ao identificar e eliminar arquivos desnecessários, processos pesados, entradas inválidas no sistema e programas que consomem recursos em segundo plano. Ele também ajuda a reduzir o tempo de inicialização e aumenta a vida útil do dispositivo.</p>
+                <h4>Abaixo uma explicação detalhada</h4>
+                <div class="bloco-explicacao">
+                    <div class="explicacao-item"><h4>1. Limpeza de arquivos temporários</h4><p>Remove caches, logs, arquivos residuais e dados de navegação que ocupam espaço sem necessidade.</p></div>
+                    <div class="explicacao-item"><h4>2. Gerenciamento de programas de inicialização</h4><p>Desativa softwares que iniciam com o Windows e deixam o sistema mais lento.</p></div>
+                    <div class="explicacao-item"><h4>3. Desfragmentação e otimização de disco</h4><p>Reorganiza os dados no HD para acelerar o acesso e evitar lentidão.</p></div>
+                    <div class="explicacao-item"><h4>4. Análise e correção do registro do sistema</h4><p>Detecta entradas inválidas no registro do Windows que podem causar falhas e instabilidade.</p></div>
+                </div>
+                <h3>Termos Técnicos Fundamentais</h3>
+                <div class="termos-grid">
+                    <div class="flip-card" tabindex="0"><div class="flip-card-inner"><div class="flip-card-front"><strong>Limpador de Registro</strong></div><div class="flip-card-back"><p>Remove entradas órfãs e inválidas do Registro do Windows que podem causar erros e lentidão.</p></div></div></div>
+                    <div class="flip-card" tabindex="0"><div class="flip-card-inner"><div class="flip-card-front"><strong>Gerenciador de Inicialização</strong></div><div class="flip-card-back"><p>Permite desativar programas desnecessários que iniciam com o Windows, acelerando o boot do sistema.</p></div></div></div>
+                    <div class="flip-card" tabindex="0"><div class="flip-card-inner"><div class="flip-card-front"><strong>Desfragmentador de Disco</strong></div><div class="flip-card-back"><p>Reorganiza os dados fragmentados no seu HD para que o sistema possa acessá-los mais rapidamente.</p></div></div></div>
+                    <div class="flip-card" tabindex="0"><div class="flip-card-inner"><div class="flip-card-front"><strong>Localizador de Arquivos Grandes</strong></div><div class="flip-card-back"><p>Ajuda a encontrar arquivos pesados e esquecidos que estão ocupando espaço valioso no disco.</p></div></div></div>
+                    <div class="flip-card" tabindex="0"><div class="flip-card-inner"><div class="flip-card-front"><strong>Removedor de Bloatware</strong></div><div class="flip-card-back"><p>Identifica e remove programas pré-instalados de fábrica que você não usa e que consomem recursos.</p></div></div></div>
+                    <div class="flip-card" tabindex="0"><div class="flip-card-inner"><div class="flip-card-front"><strong>Limpador de Cache</strong></div><div class="flip-card-back"><p>Apaga o acúmulo de dados de navegação (imagens, scripts) que deixam seu navegador lento com o tempo.</p></div></div></div>
+                    <div class="flip-card" tabindex="0"><div class="flip-card-inner"><div class="flip-card-front"><strong>Otimizador de Processos</strong></div><div class="flip-card-back"><p>Gerencia processos em tempo real para alocar mais recursos (CPU, RAM) para as tarefas ativas.</p></div></div></div>
+                    <div class="flip-card" tabindex="0"><div class="flip-card-inner"><div class="flip-card-front"><strong>Atualizador de Drivers</strong></div><div class="flip-card-back"><p>Verifica se os drivers dos seus componentes estão desatualizados, o que pode causar problemas de desempenho.</p></div></div></div>
+                    <div class="flip-card" tabindex="0"><div class="flip-card-inner"><div class="flip-card-front"><strong>Agendador de Manutenção</strong></div><div class="flip-card-back"><p>Permite programar limpezas e otimizações automáticas para rodarem em horários que não te atrapalhem.</p></div></div></div>
+                    <div class="flip-card" tabindex="0"><div class="flip-card-inner"><div class="flip-card-front"><strong>Análise de Impacto</strong></div><div class="flip-card-back"><p>Mostra quais softwares instalados mais consomem recursos do seu sistema (CPU, RAM, Disco).</p></div></div></div>
+                    <div class="flip-card" tabindex="0"><div class="flip-card-inner"><div class="flip-card-front"><strong>Boost em Tempo Real</strong></div><div class="flip-card-back"><p>Libera RAM e recursos de CPU automaticamente no momento em que você abre um programa pesado, como um jogo.</p></div></div></div>
+                    <div class="flip-card" tabindex="0"><div class="flip-card-inner"><div class="flip-card-front"><strong>Triturador de Arquivos</strong></div><div class="flip-card-back"><p>Apaga arquivos de forma permanente e segura, impedindo que possam ser recuperados por ferramentas especializadas.</p></div></div></div>
+                    <div class="flip-card" tabindex="0"><div class="flip-card-inner"><div class="flip-card-front"><strong>Otimizador de Internet</strong></div><div class="flip-card-back"><p>Ajusta configurações ocultas de rede do Windows para tentar melhorar a velocidade e a estabilidade da sua conexão.</p></div></div></div>
+                    <div class="flip-card" tabindex="0"><div class="flip-card-inner"><div class="flip-card-front"><strong>Modo Jogo (Game Mode)</strong></div><div class="flip-card-back"><p>Silencia notificações e dedica o máximo de recursos do sistema ao jogo em execução para uma melhor performance.</p></div></div></div>
+                    <div class="flip-card" tabindex="0"><div class="flip-card-inner"><div class="flip-card-front"><strong>Análise de Saúde do Disco</strong></div><div class="flip-card-back"><p>Monitora os parâmetros S.M.A.R.T. do seu disco rígido ou SSD para prever possíveis falhas de hardware.</p></div></div></div>
+                </div>
+                 <section class="simulador">
+                    <h3>Como o Otimizador de PC Acelera seu Sistema</h3>
+                    <div class="simulador-tela"><div class="simulador-elemento-animado hidden">🚀</div><div class="simulador-mensagem">Clique para iniciar a simulação</div><div class="simulador-descricao"></div><div class="simulador-icone hidden"></div></div>
+                    <button class="botao-simular" data-simulador="otimizadorPc">▶️ Simular Otimização</button>
+                </section>
+            </div>
+
+            <div id="remocao-virus" class="aba-produto">
+                <h2>🧹 Remoção de Vírus</h2>
+                <h3>O que é e como funciona</h3>
+                <p>A Remoção de Vírus da McAfee é um serviço avançado que detecta e elimina infecções ativas do sistema, mesmo as mais persistentes. Vai além da simples detecção, utilizando ferramentas de escaneamento profundo, scripts de correção e restauração de áreas críticas comprometidas por malwares.</p>
+                <h4>Abaixo uma explicação detalhada</h4>
+                <div class="bloco-explicacao">
+                    <div class="explicacao-item"><h4>1. Escaneamento profundo</h4><p>Realiza varredura completa em arquivos ocultos, processos ativos e registros críticos do sistema para localizar malwares.</p></div>
+                    <div class="explicacao-item"><h4>2. Modo de remoção forçada</h4><p>Elimina ameaças que resistem à remoção padrão, utilizando scripts automatizados e reinicializações assistidas.</p></div>
+                    <div class="explicacao-item"><h4>3. Recuperação de sistema</h4><p>Restaura arquivos do sistema danificados ou modificados por malwares, garantindo estabilidade após a limpeza.</p></div>
+                    <div class="explicacao-item"><h4>4. Relatório pós-limpeza</h4><p>Gera um relatório detalhado com todas as ameaças removidas e as ações tomadas durante o processo.</p></div>
+                </div>
+                <h3>Termos Técnicos Fundamentais</h3>
+                <div class="termos-grid">
+                    <div class="flip-card" tabindex="0"><div class="flip-card-inner"><div class="flip-card-front"><strong>Scanner de Rootkit</strong></div><div class="flip-card-back"><p>Uma ferramenta focada em encontrar malwares que se escondem profundamente no sistema operacional.</p></div></div></div>
+                    <div class="flip-card" tabindex="0"><div class="flip-card-inner"><div class="flip-card-front"><strong>Remoção Forçada</strong></div><div class="flip-card-back"><p>Utiliza técnicas avançadas para deletar arquivos maliciosos que o sistema operacional normalmente protege.</p></div></div></div>
+                    <div class="flip-card" tabindex="0"><div class="flip-card-inner"><div class="flip-card-front"><strong>Restauração de Sistema</strong></div><div class="flip-card-back"><p>Repara arquivos críticos do Windows que foram corrompidos ou alterados por uma infecção.</p></div></div></div>
+                    <div class="flip-card" tabindex="0"><div class="flip-card-inner"><div class="flip-card-front"><strong>Análise de MBR</strong></div><div class="flip-card-back"><p>Realiza uma varredura no setor mestre de inicialização do disco, uma área crítica alvo de malwares complexos.</p></div></div></div>
+                    <div class="flip-card" tabindex="0"><div class="flip-card-inner"><div class="flip-card-front"><strong>Neutralização de Processos</strong></div><div class="flip-card-back"><p>Finaliza à força os processos de malwares ativos na memória antes de iniciar a remoção dos arquivos.</p></div></div></div>
+                    <div class="flip-card" tabindex="0"><div class="flip-card-inner"><div class="flip-card-front"><strong>Relatório Forense</strong></div><div class="flip-card-back"><p>Gera um relatório detalhado sobre como a infecção ocorreu e quais arquivos foram afetados.</p></div></div></div>
+                    <div class="flip-card" tabindex="0"><div class="flip-card-inner"><div class="flip-card-front"><strong>Verificação de Tarefas</strong></div><div class="flip-card-back"><p>Procura por tarefas maliciosas que o vírus possa ter criado para se reativar após uma reinicialização.</p></div></div></div>
+                    <div class="flip-card" tabindex="0"><div class="flip-card-inner"><div class="flip-card-front"><strong>Limpeza de Restauração</strong></div><div class="flip-card-back"><p>Remove pontos de restauração do sistema que possam estar infectados para evitar uma reinfecção acidental.</p></div></div></div>
+                    <div class="flip-card" tabindex="0"><div class="flip-card-inner"><div class="flip-card-front"><strong>Análise de Hijacking</strong></div><div class="flip-card-back"><p>Detecta e reverte alterações não autorizadas na sua página inicial e buscador do navegador.</p></div></div></div>
+                    <div class="flip-card" tabindex="0"><div class="flip-card-inner"><div class="flip-card-front"><strong>Scripting de Remoção</strong></div><div class="flip-card-back"><p>Permite que técnicos de suporte executem scripts personalizados para remover ameaças novas e desconhecidas.</p></div></div></div>
+                    <div class="flip-card" tabindex="0"><div class="flip-card-inner"><div class="flip-card-front"><strong>Varredura Sob Demanda</strong></div><div class="flip-card-back"><p>Permite clicar com o botão direito em qualquer arquivo ou pasta e iniciar uma varredura de vírus imediata.</p></div></div></div>
+                    <div class="flip-card" tabindex="0"><div class="flip-card-inner"><div class="flip-card-front"><strong>Disco de Emergência</strong></div><div class="flip-card-back"><p>Ferramenta para criar um pendrive de boot para limpar um computador que nem sequer consegue iniciar o Windows.</p></div></div></div>
+                    <div class="flip-card" tabindex="0"><div class="flip-card-inner"><div class="flip-card-front"><strong>Heurística Avançada</strong></div><div class="flip-card-back"><p>Analisa o comportamento de um arquivo para detectar variantes de vírus ainda não catalogadas, com base em "famílias" de malware.</p></div></div></div>
+                    <div class="flip-card" tabindex="0"><div class="flip-card-inner"><div class="flip-card-front"><strong>Detecção de PUP</strong></div><div class="flip-card-back"><p>Identifica Programas Potencialmente Indesejados que não são vírus, mas foram instalados "de carona" com outros.</p></div></div></div>
+                    <div class="flip-card" tabindex="0"><div class="flip-card-inner"><div class="flip-card-front"><strong>Inteligência de Nuvem</strong></div><div class="flip-card-back"><p>Envia a "impressão digital" de um arquivo suspeito para ser analisada por uma rede global de segurança em segundos.</p></div></div></div>
+                </div>
+                <section class="simulador">
+                    <h3>Como a Remoção Avançada Funciona</h3>
+                    <div class="simulador-tela"><div class="simulador-elemento-animado hidden">💀</div><div class="simulador-mensagem">Clique para iniciar a simulação</div><div class="simulador-descricao"></div><div class="simulador-icone hidden"></div></div>
+                    <button class="botao-simular" data-simulador="remocaoVirus">▶️ Simular Remoção Profunda</button>
+                </section>
+            </div>
+
+            <div id="controle-parental" class="aba-produto">
+                 <h2>👨‍👩‍👧‍👦 Controle Parental</h2>
+                 <h3>O que é e como funciona</h3>
+                 <p>O Controle Parental da McAfee é uma solução que permite aos responsáveis monitorar, filtrar e limitar o acesso digital de crianças e adolescentes. Com ele, é possível proteger menores de conteúdo impróprio, limitar o tempo de uso e acompanhar a atividade online de forma segura e discreta.</p>
+                 <h4>Abaixo uma explicação detalhada</h4>
+                <div class="bloco-explicacao">
+                    <div class="explicacao-item"><h4>1. Filtros de conteúdo</h4><p>Bloqueia categorias de sites inadequados, como pornografia, violência, jogos de azar ou redes sociais.</p></div>
+                    <div class="explicacao-item"><h4>2. Monitoramento de atividades</h4><p>Permite visualizar histórico de navegação, aplicativos usados, termos pesquisados e vídeos assistidos.</p></div>
+                    <div class="explicacao-item"><h4>3. Limites de tempo</h4><p>Configura horários e duração de uso por dispositivo ou por aplicativo, evitando uso excessivo.</p></div>
+                    <div class="explicacao-item"><h4>4. Localização em tempo real</h4><p>Rastreia a localização geográfica dos dispositivos usados pelas crianças em tempo real, com alertas de deslocamento.</p></div>
+                </div>
+                 <h3>Termos Técnicos Fundamentais</h3>
+                 <div class="termos-grid">
+                    <div class="flip-card" tabindex="0"><div class="flip-card-inner"><div class="flip-card-front"><strong>Filtro de Conteúdo</strong></div><div class="flip-card-back"><p>Bloqueia automaticamente o acesso a sites e vídeos com conteúdo impróprio, como violência ou pornografia.</p></div></div></div>
+                    <div class="flip-card" tabindex="0"><div class="flip-card-inner"><div class="flip-card-front"><strong>Limite de Tempo de Tela</strong></div><div class="flip-card-back"><p>Permite definir limites diários de uso para aplicativos específicos ou para o dispositivo como um todo. Ex: "2 horas de YouTube por dia".</p></div></div></div>
+                    <div class="flip-card" tabindex="0"><div class="flip-card-inner"><div class="flip-card-front"><strong>Rastreamento de Localização</strong></div><div class="flip-card-back"><p>Mostra a localização do dispositivo da criança em tempo real em um mapa, oferecendo mais segurança.</p></div></div></div>
+                    <div class="flip-card" tabindex="0"><div class="flip-card-inner"><div class="flip-card-front"><strong>Geofencing (Cercas Virtuais)</strong></div><div class="flip-card-back"><p>Cria zonas seguras (como "casa" e "escola") e envia um alerta aos pais caso a criança saia dessas áreas.</p></div></div></div>
+                    <div class="flip-card" tabindex="0"><div class="flip-card-inner"><div class="flip-card-front"><strong>Bloqueio de Aplicativos</strong></div><div class="flip-card-back"><p>Impede a instalação ou o uso de aplicativos específicos que você não aprova, como redes sociais ou jogos.</p></div></div></div>
+                    <div class="flip-card" tabindex="0"><div class="flip-card-inner"><div class="flip-card-front"><strong>Relatório de Atividades</strong></div><div class="flip-card-back"><p>Envia um resumo para os pais mostrando quais aplicativos foram usados, sites visitados e com quem a criança conversou.</p></div></div></div>
+                    <div class="flip-card" tabindex="0"><div class="flip-card-inner"><div class="flip-card-front"><strong>Monitoramento de Pesquisa</strong></div><div class="flip-card-back"><p>Exibe os termos que a criança está pesquisando em buscadores como o Google, ajudando a identificar interesses ou riscos.</p></div></div></div>
+                    <div class="flip-card" tabindex="0"><div class="flip-card-inner"><div class="flip-card-front"><strong>Horário de Uso</strong></div><div class="flip-card-back"><p>Define horários específicos em que o dispositivo pode ser usado, bloqueando-o automaticamente na hora de dormir ou de estudar.</p></div></div></div>
+                    <div class="flip-card" tabindex="0"><div class="flip-card-inner"><div class="flip-card-front"><strong>Alerta de Cyberbullying</strong></div><div class="flip-card-back"><p>Usa IA para monitorar conversas e alertar os pais sobre potenciais sinais de bullying ou assédio.</p></div></div></div>
+                    <div class="flip-card" tabindex="0"><div class="flip-card-inner"><div class="flip-card-front"><strong>Proteção de Desinstalação</strong></div><div class="flip-card-back"><p>Impede que a criança desinstale o aplicativo de controle parental sem a senha dos pais.</p></div></div></div>
+                    <div class="flip-card" tabindex="0"><div class="flip-card-inner"><div class="flip-card-front"><strong>Modo Lista Branca</strong></div><div class="flip-card-back"><p>Um modo super restritivo onde a criança só pode acessar os sites e apps que os pais adicionaram a uma lista de permissões.</p></div></div></div>
+                    <div class="flip-card" tabindex="0"><div class="flip-card-inner"><div class="flip-card-front"><strong>Botão de Pânico (SOS)</strong></div><div class="flip-card-back"><p>Um botão que a criança pode apertar para enviar instantaneamente sua localização e um pedido de ajuda aos pais.</p></div></div></div>
+                    <div class="flip-card" tabindex="0"><div class="flip-card-inner"><div class="flip-card-front"><strong>Monitoramento do YouTube</strong></div><div class="flip-card-back"><p>Exibe um histórico dos vídeos que a criança assistiu e os termos que pesquisou dentro do YouTube.</p></div></div></div>
+                    <div class="flip-card" tabindex="0"><div class="flip-card-inner"><div class="flip-card-front"><strong>Bloqueio de Compras</strong></div><div class="flip-card-back"><p>Impede que a criança faça compras dentro de jogos e aplicativos sem a senha dos pais, evitando gastos inesperados.</p></div></div></div>
+                    <div class="flip-card" tabindex="0"><div class="flip-card-inner"><div class="flip-card-front"><strong>Contatos de Confiança</strong></div><div class="flip-card-back"><p>Permite que a criança ligue ou envie mensagens apenas para uma lista de contatos pré-aprovada pelos pais.</p></div></div></div>
+                </div>
+                <section class="simulador">
+                    <h3>Como o Controle Parental Protege</h3>
+                    <div class="simulador-tela"><div class="simulador-elemento-animado hidden">🔞</div><div class="simulador-mensagem">Clique para iniciar a simulação</div><div class="simulador-descricao"></div><div class="simulador-icone hidden"></div></div>
+                    <button class="botao-simular" data-simulador="controleParental">▶️ Simular Bloqueio de Conteúdo</button>
+                </section>
+            </div>
+
+            <div id="seguranca-empresarial" class="aba-produto">
+                <h2>🏢 Segurança Empresarial</h2>
+                <h3>O que é e como funciona</h3>
+                <p>A Segurança Empresarial da McAfee oferece uma suíte avançada de proteção digital para empresas de todos os portes. Ela combina defesa contra ameaças, gerenciamento centralizado, criptografia de dados e conformidade com normas regulatórias.</p>
+                <h4>Abaixo uma explicação detalhada</h4>
+                <div class="bloco-explicacao">
+                    <div class="explicacao-item"><h4>1. Gerenciamento centralizado</h4><p>Permite controlar a segurança de todos os dispositivos da empresa por um único painel, com políticas customizáveis.</p></div>
+                    <div class="explicacao-item"><h4>2. Proteção multinível</h4><p>Combina antivírus, firewall, prevenção contra intrusões, e detecção de ameaças avançadas em uma única solução.</p></div>
+                    <div class="explicacao-item"><h4>3. Criptografia de dados</h4><p>Garante que informações confidenciais fiquem protegidas, mesmo que dispositivos sejam perdidos ou roubados.</p></div>
+                    <div class="explicacao-item"><h4>4. Conformidade e relatórios</h4><p>Ajuda a empresa a cumprir exigências de LGPD, GDPR, HIPAA, entre outras, com geração automática de relatórios de auditoria.</p></div>
+                </div>
+                <h3>Termos Técnicos Fundamentais</h3>
+                <div class="termos-grid">
+                   <div class="flip-card" tabindex="0"><div class="flip-card-inner"><div class="flip-card-front"><strong>EDR (Endpoint Detection & Response)</strong></div><div class="flip-card-back"><p>Monitora e responde a ameaças em tempo real nos dispositivos finais da empresa (notebooks, servidores).</p></div></div></div>
+                    <div class="flip-card" tabindex="0"><div class="flip-card-inner"><div class="flip-card-front"><strong>DLP (Data Loss Prevention)</strong></div><div class="flip-card-back"><p>Impede o vazamento de dados sensíveis, bloqueando o envio de informações confidenciais para fora da rede.</p></div></div></div>
+                    <div class="flip-card" tabindex="0"><div class="flip-card-inner"><div class="flip-card-front"><strong>SIEM (Security Information & Event Management)</strong></div><div class="flip-card-back"><p>Analisa e correlaciona logs de segurança de toda a rede para detectar ataques e anomalias em tempo real.</p></div></div></div>
+                    <div class="flip-card" tabindex="0"><div class="flip-card-inner"><div class="flip-card-front"><strong>IAM (Identity & Access Management)</strong></div><div class="flip-card-back"><p>Gerencia as identidades dos usuários e controla quem tem permissão para acessar quais recursos na empresa.</p></div></div></div>
+                    <div class="flip-card" tabindex="0"><div class="flip-card-inner"><div class="flip-card-front"><strong>XDR (Extended Detection & Response)</strong></div><div class="flip-card-back"><p>Uma evolução do EDR que coleta dados não apenas de endpoints, mas também de redes, nuvem e e-mails para uma visão unificada.</p></div></div></div>
+                    <div class="flip-card" tabindex="0"><div class="flip-card-inner"><div class="flip-card-front"><strong>Threat Hunting</strong></div><div class="flip-card-back"><p>O processo proativo de procurar por ameaças avançadas e escondidas na rede que não foram detectadas automaticamente.</p></div></div></div>
+                    <div class="flip-card" tabindex="0"><div class="flip-card-inner"><div class="flip-card-front"><strong>Network Segmentation</strong></div><div class="flip-card-back"><p>Divide a rede da empresa em segmentos isolados para conter um ataque e impedir que ele se espalhe.</p></div></div></div>
+                    <div class="flip-card" tabindex="0"><div class="flip-card-inner"><div class="flip-card-front"><strong>Vulnerability Assessment</strong></div><div class="flip-card-back"><p>Escaneia sistemas e aplicações em busca de falhas de segurança conhecidas (vulnerabilidades) antes que sejam exploradas.</p></div></div></div>
+                    <div class="flip-card" tabindex="0"><div class="flip-card-inner"><div class="flip-card-front"><strong>CASB (Cloud Access Security Broker)</strong></div><div class="flip-card-back"><p>Atua como um intermediário de segurança entre os usuários e os serviços em nuvem (como Office 365, Google Workspace).</p></div></div></div>
+                    <div class="flip-card" tabindex="0"><div class="flip-card-inner"><div class="flip-card-front"><strong>Princípio do Menor Privilégio</strong></div><div class="flip-card-back"><p>Uma política de segurança onde cada usuário tem acesso apenas às informações e recursos estritamente necessários para seu trabalho.</p></div></div></div>
+                    <div class="flip-card" tabindex="0"><div class="flip-card-inner"><div class="flip-card-front"><strong>SOAR</strong></div><div class="flip-card-back"><p>Orquestração e Automação da Resposta a Incidentes. Plataforma que automatiza ações de segurança em larga escala.</p></div></div></div>
+                    <div class="flip-card" tabindex="0"><div class="flip-card-inner"><div class="flip-card-front"><strong>UEBA</strong></div><div class="flip-card-back"><p>Análise de Comportamento de Usuários. Usa IA para detectar desvios que possam indicar uma ameaça interna.</p></div></div></div>
+                    <div class="flip-card" tabindex="0"><div class="flip-card-inner"><div class="flip-card-front"><strong>Threat Intelligence Feed</strong></div><div class="flip-card-back"><p>Um fluxo contínuo de dados sobre novas ameaças globais que alimenta as defesas da empresa em tempo real.</p></div></div></div>
+                    <div class="flip-card" tabindex="0"><div class="flip-card-inner"><div class="flip-card-front"><strong>Controle de Dispositivos</strong></div><div class="flip-card-back"><p>Política que controla quais dispositivos externos (como pendrives) podem ser conectados e usados nos computadores da empresa.</p></div></div></div>
+                    <div class="flip-card" tabindex="0"><div class="flip-card-inner"><div class="flip-card-front"><strong>Gateway de E-mail</strong></div><div class="flip-card-back"><p>Um filtro avançado que analisa todos os e-mails, bloqueando spam, phishing e malware antes que cheguem ao funcionário.</p></div></div></div>
+               </div>
+               <section class="simulador">
+                    <h3>Como a Segurança Empresarial Responde a Ameaças</h3>
+                    <div class="simulador-tela"><div class="simulador-elemento-animado hidden">🚨</div><div class="simulador-mensagem">Clique para iniciar a simulação</div><div class="simulador-descricao"></div><div class="simulador-icone hidden"></div></div>
+                    <button class="botao-simular" data-simulador="segurancaEmpresarial">▶️ Simular Resposta a Incidente</button>
+                </section>
+           </div>
+        </section>
+
+        <section id="planos" class="aba">
+             <h2>Nossos Planos</h2>
+             <div class="plan-cards">
+                 <div class="plan-card">
+                     <h3>McAfee Multi Access 1 Dispositivo</h3>
+                     <div class="price">R$11,98/mês (5x sem juros) — Total R$59,88</div>
+                     <ul><li>Antivírus com inteligência artificial</li><li>Firewall que bloqueia até ameaças invisíveis</li><li>VPN privada para navegação segura</li></ul>
+                     <button>Saber mais</button>
+                     <div class="details"><p>Uma central de segurança focada em um dispositivo: navegue com total liberdade, baixe arquivos com confiança e tenha a certeza de que nada entra ou sai do seu sistema sem sua permissão.</p></div>
+                 </div>
+                 <div class="plan-card">
+                     <h3>McAfee Multi Access 3 Dispositivos</h3>
+                     <div class="price">R$10,90/mês (12x sem juros) — Total R$130,80</div>
+                     <ul><li>Segurança total para você e sua família</li><li>VPN ilimitada para navegação sem rastros</li><li>Bloqueio instantâneo de ameaças</li></ul>
+                     <button>Saber mais</button>
+                     <div class="details"><p>Mantenha celular, notebook e tablet seguros com uma única assinatura. Antivírus de elite, firewall inteligente e proteção em tempo real.</p></div>
+                 </div>
+                 <div class="plan-card">
+                     <h3>McAfee Multi Access 5 Dispositivos</h3>
+                     <div class="price">R$14,90/mês (12x sem juros) — Total R$178,80</div>
+                     <ul><li>Proteção total para toda a casa ou escritório</li><li>Antivírus com IA preditiva</li><li>VPN ilimitada + suporte 24h</li></ul>
+                     <button>Saber mais</button>
+                     <div class="details"><p>Perfeito para famílias ou pequenos negócios: antivírus com inteligência artificial, VPN ilimitada e suporte técnico sempre disponível.</p></div>
+                 </div>
+             </div>
+        </section>
+
+        <section id="sobre" class="aba">
+            <h2>Mais Sobre o McAfee</h2>
+             <div class="award-section">
+                <img src="https://www.siliconrepublic.com/wp-content/uploads/2019/08/Depositphotos_40325177_xl-2015-718x523.jpg" alt="Globo digital representando a presença global da McAfee" class="award-badge">
+                <div class="award-text">
+                    <h3>Você Sabia?</h3>
+                    <ul>
+                        <li>🌍 Presente em mais de <strong>180 países</strong>.</li>
+                        <li>🔒 Protege mais de <strong>600 milhões de dispositivos</strong> no mundo todo.</li>
+                        <li>🏆 Recebeu mais de <strong>30 prêmios internacionais</strong> de excelência em segurança cibernética.</li>
+                        <li>💼 Clientes incluem <strong>empresas Fortune 500</strong>, escolas e governos.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="award-section">
+                <img src="https://www.pngarts.com/files/5/Editors-Choice-PNG-Pic-328x279.png" alt="Selo Escolha do Editor PCMag" class="award-badge">
+                <div class="award-text">
+                    <h3>Editor’s Choice da PC Mag</h3>
+                    <ul>
+                        <li><strong>O que é: </strong>O selo<strong> Editor’s Choice</strong> da revista<strong> PC Mag</strong> é concedido apenas aos produtos que se destacam em qualidade, desempenho, usabilidade e custo-benefício.</li>
+                        <li><strong>Critérios: </strong>Os especialistas da revista realizam testes técnicos extensos, incluindo simulações de ameaças reais, benchmarks de desempenho e avaliações de recursos adicionais, como VPN, firewall, e proteção para identidade digital.</li>
+                        <li><strong>Importância para o McAfee: </strong>Esse selo é um dos mais desejados na indústria. Reforça a confiança do consumidor e destaca o McAfee como uma solução completa e confiável.</li>
+                        <li><strong>Histórico: </strong>A McAfee recebeu o <strong>Editor’s Choice PC Mag</strong> em 2020, 2021 e 2022 por seu conjunto de recursos avançados, interface amigável e alto desempenho em testes.</li>
+                        <li><strong>Quantidade de prêmios: </strong>McAfee foi premiada pelo menos 33 vezes com o selo de “Escolha do Editor”.</li>
+                    </ul>
+                </div>
+            </div>
+             <div class="award-section">
+                <img src="https://media.kasperskydaily.com/wp-content/uploads/sites/92/2022/12/14080456/ksc-wins-av-test-2022-featured.jpg" alt="Prêmio AV-TEST" class="award-badge">
+                <div class="award-text">
+                    <h3>Certificação AV-TEST</h3>
+                    <ul>
+                        <li><strong>O que é: </strong> A AV-Test é uma das instituições independentes mais respeitadas na área de segurança digital, especializada em avaliar softwares antivírus e soluções de cibersegurança em todo o mundo. Ela analisa proteção, desempenho e usabilidade.</li>
+                        <li><strong>Critérios: </strong> Testes rigorosos são feitos em tempo real com amostras de malware recentes, verificando o quão bem o antivírus protege, seu impacto no sistema e se é fácil de usar.</li>
+                        <li><strong>Importância para o McAfee: </strong>A certificação confirma que o McAfee fornece proteção de alta qualidade, com impacto mínimo no desempenho dos dispositivos. É uma chancela internacional de segurança eficaz.</li>
+                        <li><strong>Quantidade de prêmios: </strong>McAfee já foi certificada mais de 10 vezes nos últimos anos, com várias premiações consecutivas por desempenho excelente.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="award-section">
+    <img src="https://blog.emsisoft.com/wp-content/uploads/2015/07/avc_perf_2015.png" alt="Logo AV-Comparatives" class="award-badge">
+    <div class="award-text">
+        <h3>Prêmio "Advanced+" da AV-Comparatives</h3>
+        <ul>
+            <li><strong>O que é:</strong> A AV-Comparatives é um renomado laboratório de testes independente da Áustria. O selo "Advanced+" é a classificação mais alta concedida por eles.</li>
+            <li><strong>Critérios:</strong> Avaliação contínua em testes de "Proteção no Mundo Real" (Real-World Protection Test), que simula as condições reais de navegação de um usuário, medindo a capacidade de bloquear ameaças com o mínimo de falsos positivos.</li>
+            <li><strong>Importância para o McAfee:</strong> Receber consistentemente a classificação máxima da AV-Comparatives valida a eficácia do McAfee contra as ameaças mais recentes que circulam na internet, com baixo impacto no desempenho do sistema.</li>
+        </ul>
+    </div>
+</div>
+
+<div class="award-section">
+    <img src="https://numentis.com/wp-content/uploads/2023/10/webroot-se-aaa.png" alt="Logo SE Labs" class="award-badge">
+    <div class="award-text">
+        <h3>Certificação "AAA" da SE Labs</h3>
+        <ul>
+            <li><strong>O que é:</strong> A SE Labs é um laboratório britânico que testa soluções de segurança simulando o comportamento de hackers, desde o início até o fim de um ataque.</li>
+            <li><strong>Critérios:</strong> A classificação máxima "AAA" é concedida apenas aos produtos que demonstram eficácia total em detectar, proteger e neutralizar ameaças complexas em todas as etapas da cadeia de ataque.</li>
+            <li><strong>Importância para o McAfee:</strong> Este selo significa que a proteção do McAfee é robusta e realista, sendo eficaz não apenas em encontrar um vírus, mas em impedir que uma invasão completa aconteça.</li>
+        </ul>
+    </div>
+</div>
+
+<div class="award-section">
+    <img src="https://www.cohesity.com/wp-content/new_media/2024/01/gartner-2024-hero-image.png" alt="Logo Gartner Peer Insights Customers' Choice" class="award-badge">
+    <div class="award-text">
+        <h3>"Escolha dos Clientes" no Gartner Peer Insights</h3>
+        <ul>
+            <li><strong>O que é:</strong> Um reconhecimento da Gartner, uma das maiores empresas de pesquisa do mundo, baseado exclusivamente em avaliações e feedback de profissionais de TI que usam as soluções no dia a dia.</li>
+            <li><strong>Critérios:</strong> As avaliações cobrem a experiência completa, desde a implementação e o suporte até a capacidade e o desempenho real do produto em ambientes corporativos.</li>
+            <li><strong>Importância para o McAfee:</strong> Este prêmio é um forte testemunho da satisfação do cliente no mundo real, mostrando que o McAfee não apenas funciona bem em laboratório, mas também atende e supera as expectativas de seus usuários profissionais.</li>
+        </ul>
+    </div>
+</div>
+
+<div class="award-section">
+    <img src="https://electroneek.com/wp-content/uploads/2023/07/electroneek-named-a-winner-for-crns-2023-tech-innovator-award2-scaled.jpg" class="award-badge">
+    <div class="award-text">
+        <h3>Prêmio "Inovador em Tecnologia" da CRN</h3>
+        <ul>
+            <li><strong>O que é:</strong> A CRN é uma das principais publicações do setor de tecnologia. Este prêmio homenageia fornecedores que oferecem produtos inovadores e que agregam valor significativo para seus parceiros de negócios e clientes.</li>
+            <li><strong>Critérios:</strong> A avaliação é focada em produtos que se destacam pela sua tecnologia de ponta, originalidade e capacidade de resolver problemas complexos do mercado de TI.</li>
+            <li><strong>Importância para o McAfee:</strong> Ser reconhecido como um "Inovador em Tecnologia" pela CRN reforça o compromisso da McAfee com a pesquisa e o desenvolvimento, mostrando que a empresa continua na vanguarda da cibersegurança.</li>
+        </ul>
+    </div>
+</div>
+        </section>
+
+        <section id="tradeup" class="aba">
+            <h2>Conhecendo a TradeUp</h2>
+            <h4>Você sabia que a TradeUp é uma das primeiras empresas credenciadas a revenda de McAfee?</h4>
+            <p>Tendo menos de 10 anos de mercado, já estamos em mais de 3 países fazendo a diferença no ramo tecnológico.</p>
+        </section>
+
+        <section id="midias" class="aba">
+            <h2>Mídias para conhecer melhor</h2>
+            <div class="video-container">
+                <iframe 
+        width="200" 
+        height="100"
+        src="https://www.youtube.com/embed/06d2QRSlA1k?si=OxVAv7HeSXjUcCXG" 
+        title="YouTube video player" 
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+        referrerpolicy="strict-origin-when-cross-origin" 
+        allowfullscreen></iframe>
+            </div>
+        </section>
+    </main>
+    <script src="funcional.js"></script>
+</body>
+</html>
